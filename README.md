@@ -22,6 +22,7 @@ This project has been built with a lot of love, consideration to help others wit
 - [Bootstrap Component](https://www.bootstrapcdn.com)
 - Calendar JS
 - [Weather API](https://www.weatherapi.com/)
+- SQLite
 
 ## Challenges we ran into
 In our team, there's only one member that knows how to use flask and one other that knows how to use figma. It takes us a while to learn both of those to comprehensively create the website.
@@ -49,5 +50,4 @@ flask run
 
 ## What's next for yen - daily mental health tracker
 - Implement a database: 
-  - Store user credentials 
-  - Store daily progres
+  - Store daily progress
