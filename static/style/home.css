@@ -81,7 +81,6 @@ h5 {
 } 
 .sub-headline{
     position: absolute;
-    width: 111px;
     height: 33px;
     left: 30px;
     top: -30px;
@@ -109,7 +108,7 @@ h5 {
     height: 110px;
     left: 469px;
     top: 65px;
-    background: #FFE6C8;
+    background: #F9E2DB;
     border-radius: 34px;
 }
 .row-1 .right-img-2{
@@ -118,7 +117,7 @@ h5 {
     height: 110px;
     left: 469px;
     top: 195px;
-    background: #FFE6C8;
+    background: #F9E2DB;
     border-radius: 34px;
 }
 #note {
@@ -140,17 +139,17 @@ h5 {
     height: 240px;
     left: 469px;
     top: 65px;
-    background: #FBF9F5;
+    background: #FFEFCE;
     border-radius: 34px;
 }
 .right-img .button-list-1{
     position: absolute;
-    left: 28px;
+    left: 25px;
     top: 30px;
 }
 .right-img .button-list-2{
     position: absolute;
-    left: 28px;
+    left: 25px;
     top: 115px;
 }
 button{
@@ -159,6 +158,9 @@ button{
     background-size: 100%;
     background-size: 40px auto;
     margin-right: 65px;
+}
+button:hover{
+    filter: drop-shadow(10px 4px 10px red);
 }
 .mood-btn {
     position: absolute;
@@ -180,14 +182,41 @@ button{
     left: 0px;
     top: 66px;
 }
+.row-2 .left-img-mood {
+    position: absolute;
+    width: 449px;
+    height: 239px;
+    left: 0px;
+    top: 66px;
+    background: url('../image/sleep_backgr.png');
+    background-size: cover;
+}
 .row-2 .right-img{
     position: absolute;
     width: 449px;
-    height: 228px;
+    height: 239px;
     left: 469px;
-    top: 65px;
-    background: #FFE6C8;
+    top: 66px;
+    background: #F9E2DB;
     border-radius: 34px;
+}
+.row-2 .right-img-mood{
+    position: absolute;
+    width: 449px;
+    height: 239px;
+    left: 469px;
+    top: 66px;
+    border-radius: 34px;
+    background-color: #727081;
+    color: white;
+}
+.row-2 .right-img-mood .sub-headline{
+    position: absolute;
+    height: 33px;
+    left: 30px;
+    top: -30px;
+    color: white;
+    text-align: center;
 }
 .row-2 .right-img-1 {
     position: absolute;
@@ -414,4 +443,35 @@ button{
 .today .cld-number.eventday:hover{
     background: #888;
 }
-  
+
+/* FLASHHHHH 2 CARDSDDDSSS */
+
+#tips{
+    position: absolute;
+    height: 30px;
+    left: 40px;
+    top: 40px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: #FFFFF8;
+}
+
+#banguoi{
+    position: absolute;
+    width: 342px;
+    height: 244px;
+    left: 50px;
+    top: 10px;
+}
+
+#timer{
+    position: absolute;
+    width: 382px;
+    height: 180px;
+    left: 35px;
+    top: 20px;
+}
