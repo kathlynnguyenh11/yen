@@ -1,4 +1,6 @@
 # Yen - A Daily Mental Health Tracker
+<img width="1440" alt="Desktop - 4" src="https://user-images.githubusercontent.com/54951459/160291636-fc6bdcdb-5bd0-4b90-866e-16440d67e994.png">
+
 ## Inspiration
 
 ## What it does
