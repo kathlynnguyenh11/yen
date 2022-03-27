@@ -63,13 +63,28 @@
                 </div>
                 <div class="right-img-mood">
                     <h5 class="sub-headline">sleepy tips</h5>
-                    <p id="tips">
-                        Sleep before 10PM.<br>  
-                        Sleep at least 8 hours per day.<br>
-                        Have water before and after sleep.<br>
+                    <img id="sleep-tipssss" name="slide"/>
+                    <script>
+                        var i = 0; 			// Start Point
+                        var images = [];	// Images Array
+                        var time = 2000;	// Time Between Switch
                         
-                        The best night is a sleep without worry.
-                    </p>
+                        images[0] = "../static/image/sleep/sleep1.png";
+                        images[1] = "../static/image/sleep/sleep2.png";
+                        images[2] = "../static/image/sleep/sleep3.png";
+                        images[3] = "../static/image/sleep/sleep4.png";
+
+                        function changeImg(){
+                            document.slide.src = images[i];
+                            if(i < images.length - 1){
+                                i++; 
+                            } else { 
+                                i = 0;
+                            }
+                            setTimeout("changeImg()", time);
+                        }
+                        window.onload=changeImg;
+                    </script>
                 </div>
             </div>
 
