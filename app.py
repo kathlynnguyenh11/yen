@@ -58,7 +58,11 @@ def login():
 
 @app.route('/mood', methods = ['GET', 'POST'])
 def mood():
-    return render_template('mood.html')
+    url = 'http://api.weatherapi.com/v1/forecast.json'
+    params = dict(key="32185c047a7245c7b22211711222603", q = "New York")
+    res = requests.get(url, params=params)
+    data = json.loads(res.text)
+    return render_template("mood.html", current = data["current"], location = data["location"], forecast = data["forecast"])
 
 if __name__ == '__main__':
     app.run(debug = True)
