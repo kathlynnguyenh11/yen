@@ -763,6 +763,10 @@ border-radius: 100px;
     }
 
 
-    #sunset-time, #sunrise-time{
+    #sunset-time, #sunrise-time, #moonrise-time{
       bottom:50px;
     }
+
+.clock-img {
+  width: 100%
+}
