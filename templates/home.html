@@ -119,16 +119,21 @@
                 <div class="col-a"> 
                     <p id="sunrise">Sunrise</p>
                     <div class="box-a">
+                        <img src="../static/image/weather/clock.png">
+                        <p id = "sunrise-time">{{forecast.forecastday[0].astro.sunrise}}</p>
                     </div>
                 </div>
                 <div class="col-b"> 
                     <p id="golden-hour">Golden hour</p>
                     <div class="box-b">
+                        <img src="../static/image/weather/clock.png">
                     </div>
                 </div>
                 <div class="col-c"> 
                     <p id="sunset">Sunset</p>
                     <div class="box-c">
+                        <img src="../static/image/weather/clock.png">
+                        <p id = "sunset-time">{{forecast.forecastday[0].astro.sunset}}</p>
                     </div>
                 </div>
             </div>
