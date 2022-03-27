@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style/home.css" />
+    <title>Mood Tracker</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="left-col">
+        <nav class="nav-flex-column">
+            <div class="nav-link">
+                <a href="{{url_for('home')}}"><img id="icon-bar" src="../static/image/icon_home.png"></a>
+            </div>
+            <div class="nav-link">
+                <a href=""><img id="icon-bar" src="../static/image/icon_analysis.png"></a>
+            </div>
+            <div class="nav-link">
+                <a href=""><img id="icon-bar" src="../static/image/icon_calendar.png"></a>
+            </div>
+            <div class="nav-link">
+                <a href=""><img id="icon-bar" src="../static/image/icon_setting.png"></a>
+            </div>
+        </nav>          
+    </div>
+    <div class="center-col">
+        <div class="content">
+            <h4>Yen</h4>
+            <div class="row-1">
+                <h5 class="headline">Hi Vu, how u doin?</h5>
+                <div class="left-img">
+                    
+                </div>
+                <div class="right-img">
+                    <div class="button-list-1">
+                        <button type="button">
+                            <img class="mood-btn" src="../static/image/mood/mood_confused.png">
+                        </button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_happy.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_driven.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_hopeful.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_disappointed.png"></button>
+                        <script type="text/javascript">
+                            const buttons = document.querySelectorAll('button')
+                            buttons
+                        </script>
+                    </div>
+                    <div class="button-list-2">
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_calm.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_energetic.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_fear.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_amazing.png"></button>
+                        <button type="button"><img class="mood-btn" src="../static/image/mood/mood_upset.png"></button>
+                    </div>
+                </div>     
+            </div>
+
+            <div class="row-2">
+                <h5 class="headline">how was your sleep</h5>
+                <div class="left-img-mood">
+
+                </div>
+                <div class="right-img-mood">
+                    <h5 class="sub-headline">sleepy tips</h5>
+                </div>
+            </div>
+
+            <div class="row-3">
+                <h5 class="headline">how was your sleep</h5>
+                <div class="left-img">
+
+                </div>
+                <div class="right-img">
+                    <h5 class="sub-headline">sleep tips</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-col">
+        <h5 id="title-right">your daily mood tracker</h5>
+        <div class="box-1">
+            <div id="caleandar"></div>
+            <script type="text/javascript" src="{{url_for('static', filename='calendar/js/caleandar.js')}}"></script>
+            <script type="text/javascript" src="{{url_for('static', filename='calendar/js/demo.js')}}"></script>
+        </div>
+
+        <div class="long-box">
+            <h1>How is your feeling today?</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
