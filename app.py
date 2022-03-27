@@ -8,6 +8,9 @@ from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 
+import json
+import requests
+
 app = Flask(__name__)
 
 db = SQLAlchemy(app)
@@ -35,7 +38,12 @@ class LoginForm(FlaskForm):
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    url = 'http://api.weatherapi.com/v1/forecast.json'
+    params = dict(key="32185c047a7245c7b22211711222603", q = "New York")
+    res = requests.get(url, params=params)
+    data = json.loads(res.text)
+    print(type(data))
+    return render_template("home.html", current = data["current"], location = data["location"], forecast = data["forecast"])
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
