@@ -649,3 +649,7 @@ button {
 
   text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
 }
+
+   #sunset-time, #sunrise-time{
+      bottom:50px;
+    }
