@@ -31,15 +31,15 @@
         <div class="content">
             <h4>Yen</h4>
             <div class="row-1">
-                <h5 class="headline">Hi Vu, how u doin?</h5>
+                <h5 class="headline">Hi {{current_user.username}}, how u doin?</h5>
                 <div class="left-img">
                     <img id="banguoi" src="../static/image/banguoi.png">
                 </div>
                 <div class="right-img-1">
-                    <a href="{{url_for('mood')}}"><p id="note">How are your feeling today? Let's track your mood!</p></a>
+                    <a href="{{url_for('mood')}}"><p id="note">How is your feeling? Click here to track your mood!</p></a>
                 </div>
                 <div class="right-img-2">
-                    <a href="{{url_for('mood')}}"><p id="note">How was your sleep? Let's track your sleep!</p></a>
+                    <a href="{{url_for('sleep')}}"><p id="note">How was your sleep? Click here to track your sleep!</p></a>
                 </div>            
             </div>
 
@@ -76,8 +76,70 @@
         </div>
       
         <div class="long-box">
+            <div class="row-a">
+                <div class="col-1">
+                    <img src="../static/image/weather/weatherIcon.png" id = "left-img">
+                </div>
+                <div class="col-2">
+                    <img src="../static/image/weather/cf.png" id = "right-img">
+                </div>
+            </div>
+            <div class="row-b">
+                <!-- <h1 id="temp">67</h1> -->
+                {% block content %}
+                <h1 id="temp">{{current.temp_f}}</h1>
+                <p id = "date">{{location.localtime[:9]}}</p>
+                <p id = "time">{{location.localtime[10:]}}</p>
+                <div class="weather-char">
+                    <div class ="img-weather">
+                        <img src="../static/image/weather/wind.png" id="img-weather" >
+                    </div>
+                    <div class="text-weather">
+                        <p id = "wind">{{current.wind_kph}} km/h</p>
+                    </div>
+                </div>
+                <div class="weather-char">
+                    <div class ="img-weather">
+                        <img src="../static/image/weather/hum.png"id="img-weather" >
+                    </div>
+                    <div class="text-weather">
+                        <p id = "hum">{{current.humidity}} %</p>
+                    </div>
+                </div>
+                <div class="weather-char">
+                    <div class ="img-weather">
+                        <img src="../static/image/weather/rain.png" id="img-weather">
+                    </div>
+                    <div class="text-weather">
+                        <p id = "rain">{{current.pressure_in}}</p>
+                    </div>
+                </div>
+            </div>
 
-        </div>
+            <div class="row-c">
+                <div class="col-a"> 
+                    <p id="sunrise">Sunrise</p>
+                    <div class="box-a">
+                        <img src="../static/image/weather/clock.png" id="clock-img1">
+                        <p id = "sunrise-time">{{forecast.forecastday[0].astro.sunrise}}</p>
+                    </div>
+                </div>
+                <div class="col-b"> 
+                    <p id="golden-hour">Golden hour</p>
+                    <div class="box-b">
+                        <img src="../static/image/weather/clock.png" id="clock-img2">
+                        <p id = "moonrise-time">{{forecast.forecastday[0].astro.moonrise}}</p>
+                    </div>
+                </div>
+                <div class="col-c"> 
+                    <p id="sunset">Sunset</p>
+                    <div class="box-c">
+                        <img src="../static/image/weather/clock.png" id="clock-img3">
+                        <p id = "sunset-time">{{forecast.forecastday[0].astro.sunset}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
     </div>
 </div>
 </body>

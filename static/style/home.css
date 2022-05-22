@@ -84,6 +84,8 @@ h5 {
     height: 33px;
     left: 30px;
     top: -30px;
+    color: black;
+    font-size: 35px;
 }
 
 .content {
@@ -474,4 +476,10 @@ button:hover{
     height: 180px;
     left: 35px;
     top: 20px;
+}
+
+#sleep-tipssss{
+    height: 239px;
+    width: 449px;
+    margin-top: 5px;
 }

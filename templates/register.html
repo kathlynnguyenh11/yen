@@ -10,7 +10,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/style/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Register Page</title>
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
 <body>
     <div>
         <form method="POST" action="">
-            <h1 style="text-align:center">LOGIN</h1>
+            <h1 style="text-align:center">REGISTER</h1>
             {{form.hidden_tag()}}
             <label class="label">Username</label>
             {{form.username}}
@@ -27,7 +27,7 @@
             <br><br>
             {{form.submit}}
             <br><br><br><br>
-            <p class="cau-cuoi">Don't have an account? <a href="{{url_for('register')}}">Sign up</a></p>
+            <p class="cau-cuoi">Already have an account? <a href="{{url_for('register')}}">Sign in</a></p>
             <br><br>
         </form>
     </div>
